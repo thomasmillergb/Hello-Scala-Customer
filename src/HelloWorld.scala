@@ -9,25 +9,25 @@ object HelloWorld {
     println("hello")
     val customer = new Customer("Thomas Miller", 23)
     val customer2 = customer.clone()
-    customer.id = 10
-    isCustomerMatch(customer, customer2)
+    customer id = 10
+    customerMatch(customer, customer2)
     println("Hello " + customer.name + " you are the " + customer.id + " customer.")
     println("Your age was " + customer.age)
-    customer.increaseAge()
+    customer increaseAge()
     println("Happy Birthday you age is now " + customer.age)
     println("You are stuck in a time loop")
 
     (1 to 10).foreach(_ => {
-      customer.increaseAge()
+      customer increaseAge()
       println("Happy Birthday you age is now " + customer.age)
     })
-    isCustomerMatch(customer, customer2)
+    customerMatch(customer, customer2)
 
 
 
   }
 
-  private def isCustomerMatch(customer: Customer, customer2: Customer) = {
+  private def customerMatch(customer: Customer, customer2: Customer): Unit = {
     if (customer == customer2) {
       println("Match")
     }
